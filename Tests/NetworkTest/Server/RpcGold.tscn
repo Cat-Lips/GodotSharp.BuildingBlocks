@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5ft4e1rmbh1h"]
+
+[ext_resource type="Script" path="res://Tests/NetworkTest/Server/RpcGold.cs" id="1_q7d3r"]
+
+[node name="RpcGold" type="Node"]
+script = ExtResource("1_q7d3r")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq2fmlulytmts"]
+
+[ext_resource type="Script" path="res://Tests/NetworkTest/Client/PlayerProfile.cs" id="1_p6rtv"]
+[ext_resource type="PackedScene" uid="uid://cqryla64gsbgv" path="res://addons/GodotSharp.BuildingBlocks/Components/Network/Sync/DataSync.tscn" id="2_dk8v4"]
+
+[node name="PlayerProfile" type="Node"]
+script = ExtResource("1_p6rtv")
+
+[node name="Sync" parent="." instance=ExtResource("2_dk8v4")]

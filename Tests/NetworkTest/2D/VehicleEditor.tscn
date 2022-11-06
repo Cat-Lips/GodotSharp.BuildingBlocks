@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfayracqmsfan"]
+
+[ext_resource type="Script" path="res://Tests/NetworkTest/2D/VehicleEditor.cs" id="1_86crb"]
+[ext_resource type="PackedScene" uid="uid://cwuxkjrw4s8l5" path="res://addons/GodotSharp.BuildingBlocks/Components/UI/Controls/ResourceEditor.tscn" id="2_i6r7x"]
+[ext_resource type="PackedScene" uid="uid://bkah4os4x4q86" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/FileMirror.tscn" id="3_kf5fe"]
+
+[node name="VehicleEditor" type="CanvasLayer"]
+script = ExtResource("1_86crb")
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -108.0
+offset_top = -41.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Margin" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Layout" type="VBoxContainer" parent="Panel/Margin"]
+layout_mode = 2
+
+[node name="Toggle" type="Button" parent="Panel/Margin/Layout"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+text = "Edit Vehicle"
+
+[node name="Content" type="VBoxContainer" parent="Panel/Margin/Layout"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/Margin/Layout/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Editor" parent="Panel/Margin/Layout/Content" instance=ExtResource("2_i6r7x")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="Panel/Margin/Layout/Content"]
+layout_mode = 2
+alignment = 2
+
+[node name="Save" type="Button" parent="Panel/Margin/Layout/Content/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Save config for current vehicle"
+text = "Save"
+
+[node name="Load" type="MenuButton" parent="Panel/Margin/Layout/Content/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Load config from another vehicle"
+text = "Load"
+flat = false
+switch_on_hover = true
+
+[node name="Sep" type="VSeparator" parent="Panel/Margin/Layout/Content/Buttons"]
+layout_mode = 2
+
+[node name="Revert" type="Button" parent="Panel/Margin/Layout/Content/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Revert to saved config"
+text = "Revert"
+
+[node name="Reset" type="Button" parent="Panel/Margin/Layout/Content/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Reset to default config"
+text = "Reset"
+
+[node name="SavedConfigs" parent="." instance=ExtResource("3_kf5fe")]
+unique_name_in_owner = true
+Path = "user://SavedVehicleConfigs"

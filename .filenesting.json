@@ -1,0 +1,45 @@
+{
+  "help": "https://go.microsoft.com/fwlink/?linkid=866610",
+
+  "dependentFileProviders": {
+    "add": {
+      "extensionToExtension": {
+        "add": {
+          ".tscn": [
+            ".cs",
+            ".gd"
+          ],
+          ".tres": [
+            ".cs",
+            ".gd",
+            ".gdshader"
+          ],
+          ".gdshader": [
+            ".cs",
+            ".gd"
+          ],
+          ".material": [
+            ".cs",
+            ".gd"
+          ],
+          ".material.tres": [
+            ".cs",
+            ".gd"
+          ],
+          ".material.gdshader": [
+            ".cs",
+            ".gd"
+          ]
+        }
+      },
+      "fileToFile": {
+        "add": {
+          "plugin.cfg": [
+            "Plugin.cs",
+            "plugin.gd"
+          ]
+        }
+      }
+    }
+  }
+}

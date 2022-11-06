@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqbivvnkndlcj"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/Network/Sync/InputSync.cs" id="1_nywa4"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_0np71"]
+properties/0/path = NodePath(".:MultiplayerAuthority")
+properties/0/spawn = true
+properties/0/sync = true
+
+[node name="InputSync" type="MultiplayerSynchronizer"]
+root_path = NodePath(".")
+replication_config = SubResource("SceneReplicationConfig_0np71")
+script = ExtResource("1_nywa4")

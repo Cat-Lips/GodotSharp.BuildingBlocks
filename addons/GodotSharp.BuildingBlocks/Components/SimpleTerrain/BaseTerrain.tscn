@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/SimpleTerrain/BaseTerrain.cs" id="1_773i7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lpy63"]
+rough = true
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6an2f"]
+bounce = 1.0
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_knwm4"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_jda8y"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_fig3q"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_tbk1d"]
+
+[node name="Terrain" type="Node"]
+script = ExtResource("1_773i7")
+
+[node name="Floor" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_lpy63")
+
+[node name="Shape" type="CollisionShape3D" parent="Floor"]
+
+[node name="Mesh" type="MeshInstance3D" parent="Floor"]
+
+[node name="Bounds" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_6an2f")
+
+[node name="ShapeX" type="CollisionShape3D" parent="Bounds"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_knwm4")
+
+[node name="ShapeZ" type="CollisionShape3D" parent="Bounds"]
+transform = Transform3D(1, 0, 0, 0, 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_jda8y")
+
+[node name="Shape-X" type="CollisionShape3D" parent="Bounds"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_fig3q")
+
+[node name="Shape-Z" type="CollisionShape3D" parent="Bounds"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_tbk1d")

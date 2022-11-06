@@ -1,0 +1,179 @@
+[gd_scene load_steps=3 format=3 uid="uid://5aqbpe4ravww"]
+
+[ext_resource type="Script" path="res://Tests/NetworkTest/2D/Menu.cs" id="1_44ird"]
+[ext_resource type="PackedScene" path="res://addons/GodotSharp.BuildingBlocks/Components/Network/Controls/PortEdit.tscn" id="2_it30i"]
+
+[node name="Menu" type="CanvasLayer"]
+script = ExtResource("1_44ird")
+
+[node name="Panel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+offset_right = 635.0
+offset_bottom = 111.0
+
+[node name="Margin" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Layout" type="VBoxContainer" parent="Panel/Margin"]
+layout_mode = 2
+
+[node name="ServerMenu" type="HBoxContainer" parent="Panel/Margin/Layout"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MenuLabel" type="Label" parent="Panel/Margin/Layout/ServerMenu"]
+layout_mode = 2
+mouse_filter = 0
+text = "Server > "
+vertical_alignment = 1
+
+[node name="MenuItems" type="VFlowContainer" parent="Panel/Margin/Layout/ServerMenu"]
+layout_mode = 2
+
+[node name="StartServer" type="Button" parent="Panel/Margin/Layout/ServerMenu/MenuItems"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start Server"
+
+[node name="StopServer" type="Button" parent="Panel/Margin/Layout/ServerMenu/MenuItems"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Stop Server"
+
+[node name="Sep" type="VSeparator" parent="Panel/Margin/Layout/ServerMenu/MenuItems"]
+layout_mode = 2
+
+[node name="ServerAddress" type="LineEdit" parent="Panel/Margin/Layout/ServerMenu/MenuItems"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Server Address"
+editable = false
+expand_to_text_length = true
+caret_blink = true
+
+[node name="ServerPort" parent="Panel/Margin/Layout/ServerMenu/MenuItems" instance=ExtResource("2_it30i")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="End" type="VSeparator" parent="Panel/Margin/Layout/ServerMenu/MenuItems"]
+layout_mode = 2
+
+[node name="ServerStatus" type="Label" parent="Panel/Margin/Layout/ServerMenu"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Server Status"
+vertical_alignment = 1
+
+[node name="ClientMenu" type="HBoxContainer" parent="Panel/Margin/Layout"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MenuLabel" type="Label" parent="Panel/Margin/Layout/ClientMenu"]
+layout_mode = 2
+mouse_filter = 0
+text = "Client > "
+vertical_alignment = 1
+
+[node name="MenuItems" type="VFlowContainer" parent="Panel/Margin/Layout/ClientMenu"]
+layout_mode = 2
+
+[node name="CreateClient" type="Button" parent="Panel/Margin/Layout/ClientMenu/MenuItems"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Connect to Server"
+
+[node name="CloseClient" type="Button" parent="Panel/Margin/Layout/ClientMenu/MenuItems"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Disconnect from Server"
+
+[node name="Sep" type="VSeparator" parent="Panel/Margin/Layout/ClientMenu/MenuItems"]
+layout_mode = 2
+
+[node name="ConnectAddress" type="LineEdit" parent="Panel/Margin/Layout/ClientMenu/MenuItems"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Server Address"
+expand_to_text_length = true
+clear_button_enabled = true
+caret_blink = true
+
+[node name="ConnectPort" parent="Panel/Margin/Layout/ClientMenu/MenuItems" instance=ExtResource("2_it30i")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="End" type="VSeparator" parent="Panel/Margin/Layout/ClientMenu/MenuItems"]
+layout_mode = 2
+
+[node name="ClientStatus" type="Label" parent="Panel/Margin/Layout/ClientMenu"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Client Status"
+vertical_alignment = 1
+
+[node name="PlayerMenu" type="HBoxContainer" parent="Panel/Margin/Layout"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MenuLabel" type="Label" parent="Panel/Margin/Layout/PlayerMenu"]
+layout_mode = 2
+mouse_filter = 0
+text = "Player > "
+vertical_alignment = 1
+
+[node name="MenuItems" type="VFlowContainer" parent="Panel/Margin/Layout/PlayerMenu"]
+layout_mode = 2
+
+[node name="PlayerName" type="LineEdit" parent="Panel/Margin/Layout/PlayerMenu/MenuItems"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Player Name"
+placeholder_text = "Player Name"
+expand_to_text_length = true
+select_all_on_focus = true
+caret_blink = true
+
+[node name="PlayerColor" type="ColorPickerButton" parent="Panel/Margin/Layout/PlayerMenu/MenuItems"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Player Color"
+edit_alpha = false
+
+[node name="PlayerAvatar" type="OptionButton" parent="Panel/Margin/Layout/PlayerMenu/MenuItems"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="GameMenu" type="HBoxContainer" parent="Panel/Margin/Layout"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MenuLabel" type="Label" parent="Panel/Margin/Layout/GameMenu"]
+layout_mode = 2
+mouse_filter = 0
+text = "Game > "
+vertical_alignment = 1
+
+[node name="MenuItems" type="VFlowContainer" parent="Panel/Margin/Layout/GameMenu"]
+layout_mode = 2
+
+[node name="Options" type="Button" parent="Panel/Margin/Layout/GameMenu/MenuItems"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "(TODO)"
+text = "Options"
+
+[node name="Sep" type="VSeparator" parent="Panel/Margin/Layout/GameMenu/MenuItems"]
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="Panel/Margin/Layout/GameMenu/MenuItems"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quit"

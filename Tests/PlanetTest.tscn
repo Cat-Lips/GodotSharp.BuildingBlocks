@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2sxdc8x7teuk"]
+
+[ext_resource type="PackedScene" uid="uid://bpe37y468675m" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/Environment.tscn" id="1_t1ju0"]
+[ext_resource type="PackedScene" uid="uid://qnsoaxnixlfw" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/Camera.tscn" id="2_8uouv"]
+[ext_resource type="Script" path="res://Tests/PlanetTest.cs" id="2_nfqla"]
+[ext_resource type="PackedScene" uid="uid://bq1884t2glvm5" path="res://addons/GodotSharp.BuildingBlocks/Components/ProceduralPlanets/Planet.tscn" id="3_bchog"]
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/ProceduralPlanets/PlanetData.cs" id="5_j6myl"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_vmewy"]
+seed = 7
+frequency = 1.0
+fractal_weighted_strength = 1.0
+
+[sub_resource type="Resource" id="Resource_7wkls"]
+resource_name = "PlanetData"
+script = ExtResource("5_j6myl")
+Radius = 3.0
+Resolution = 250
+PlanetNoise = null
+PlanetBiomes = null
+BiomeNoise = SubResource("FastNoiseLite_vmewy")
+BiomeAmplitude = 0.5
+BiomeOffset = 0.5
+BiomeBlend = 0.5
+
+[node name="PlanetTest" type="Node"]
+script = ExtResource("2_nfqla")
+
+[node name="Environment" parent="." instance=ExtResource("1_t1ju0")]
+
+[node name="Camera" parent="." instance=ExtResource("2_8uouv")]
+CameraType = 1
+TargetPath = NodePath("../Planet")
+
+[node name="Planet" parent="." instance=ExtResource("3_bchog")]
+PlanetData = SubResource("Resource_7wkls")

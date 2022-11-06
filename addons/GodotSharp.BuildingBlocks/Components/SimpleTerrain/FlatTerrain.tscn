@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://addons/GodotSharp.BuildingBlocks/Components/SimpleTerrain/BaseTerrain.tscn" id="1_6c0um"]
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/SimpleTerrain/FlatTerrain.cs" id="2_egajq"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_k2egl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j5ht2"]
+albedo_color = Color(0, 0.392157, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_atvnl"]
+size = Vector2(100, 100)
+
+[node name="Terrain" instance=ExtResource("1_6c0um")]
+script = ExtResource("2_egajq")
+
+[node name="Shape" parent="Floor" index="0"]
+shape = SubResource("WorldBoundaryShape3D_k2egl")
+
+[node name="Mesh" parent="Floor" index="1"]
+material_override = SubResource("StandardMaterial3D_j5ht2")
+mesh = SubResource("PlaneMesh_atvnl")

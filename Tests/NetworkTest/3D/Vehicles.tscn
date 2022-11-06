@@ -1,0 +1,66 @@
+[gd_scene load_steps=22 format=3 uid="uid://dmnnil0w6wy86"]
+
+[ext_resource type="Script" path="res://Tests/NetworkTest/3D/Vehicles.cs" id="1_xhfpo"]
+[ext_resource type="PackedScene" uid="uid://cfl8c2rnw4f7" path="res://Assets/Models/Vehicles/kenney_carkit/glb/ambulance.glb" id="2_fk6vd"]
+[ext_resource type="PackedScene" uid="uid://b76bw0ikxf0ee" path="res://Assets/Models/Vehicles/kenney_carkit/glb/delivery.glb" id="3_8ylbx"]
+[ext_resource type="PackedScene" uid="uid://b3al340skwtmr" path="res://Assets/Models/Vehicles/kenney_carkit/glb/deliveryFlat.glb" id="4_mskkd"]
+[ext_resource type="PackedScene" uid="uid://25jlf0f6lhjq" path="res://Assets/Models/Vehicles/kenney_carkit/glb/firetruck.glb" id="5_3ldxv"]
+[ext_resource type="PackedScene" uid="uid://bc1djq6xclka1" path="res://Assets/Models/Vehicles/kenney_carkit/glb/garbageTruck.glb" id="6_vwhu6"]
+[ext_resource type="PackedScene" uid="uid://bc85e420rfek8" path="res://Assets/Models/Vehicles/kenney_carkit/glb/hatchbackSports.glb" id="7_wk1l7"]
+[ext_resource type="PackedScene" uid="uid://qjcfepsvf8kq" path="res://Assets/Models/Vehicles/kenney_carkit/glb/police.glb" id="8_g2h3a"]
+[ext_resource type="PackedScene" uid="uid://3v6guqvugjdq" path="res://Assets/Models/Vehicles/kenney_carkit/glb/race.glb" id="9_tkha6"]
+[ext_resource type="PackedScene" uid="uid://dr2ubahao465i" path="res://Assets/Models/Vehicles/kenney_carkit/glb/raceFuture.glb" id="10_518rs"]
+[ext_resource type="PackedScene" uid="uid://q71o0nb6wjtt" path="res://Assets/Models/Vehicles/kenney_carkit/glb/sedan.glb" id="11_c6wpa"]
+[ext_resource type="PackedScene" uid="uid://dqv4cc1p2xknw" path="res://Assets/Models/Vehicles/kenney_carkit/glb/sedanSports.glb" id="12_sl5oy"]
+[ext_resource type="PackedScene" uid="uid://ffc1nnnshr2s" path="res://Assets/Models/Vehicles/kenney_carkit/glb/suv.glb" id="13_20wl6"]
+[ext_resource type="PackedScene" uid="uid://cbwce628hkjg5" path="res://Assets/Models/Vehicles/kenney_carkit/glb/suvLuxury.glb" id="14_is65a"]
+[ext_resource type="PackedScene" uid="uid://b4rlq08ytxhsy" path="res://Assets/Models/Vehicles/kenney_carkit/glb/taxi.glb" id="15_jhpai"]
+[ext_resource type="PackedScene" uid="uid://bhumqltxxjye3" path="res://Assets/Models/Vehicles/kenney_carkit/glb/tractor.glb" id="16_leukm"]
+[ext_resource type="PackedScene" uid="uid://ds31tk8js0q17" path="res://Assets/Models/Vehicles/kenney_carkit/glb/tractorPolice.glb" id="17_20erc"]
+[ext_resource type="PackedScene" uid="uid://cemof5qv51608" path="res://Assets/Models/Vehicles/kenney_carkit/glb/tractorShovel.glb" id="18_ut0vl"]
+[ext_resource type="PackedScene" uid="uid://wcjvmor5o1u3" path="res://Assets/Models/Vehicles/kenney_carkit/glb/truck.glb" id="19_ut1qt"]
+[ext_resource type="PackedScene" uid="uid://du47vxnng08nf" path="res://Assets/Models/Vehicles/kenney_carkit/glb/truckFlat.glb" id="20_6lrcn"]
+[ext_resource type="PackedScene" uid="uid://bhycg038yebxi" path="res://Assets/Models/Vehicles/kenney_carkit/glb/van.glb" id="21_ecjab"]
+
+[node name="Vehicles" type="Node3D"]
+script = ExtResource("1_xhfpo")
+
+[node name="Ambulance" parent="." instance=ExtResource("2_fk6vd")]
+
+[node name="Delivery" parent="." instance=ExtResource("3_8ylbx")]
+
+[node name="DeliveryFlat" parent="." instance=ExtResource("4_mskkd")]
+
+[node name="Firetruck" parent="." instance=ExtResource("5_3ldxv")]
+
+[node name="GarbageTruck" parent="." instance=ExtResource("6_vwhu6")]
+
+[node name="HatchbackSports" parent="." instance=ExtResource("7_wk1l7")]
+
+[node name="Police" parent="." instance=ExtResource("8_g2h3a")]
+
+[node name="Race" parent="." instance=ExtResource("9_tkha6")]
+
+[node name="RaceFuture" parent="." instance=ExtResource("10_518rs")]
+
+[node name="Sedan" parent="." instance=ExtResource("11_c6wpa")]
+
+[node name="SedanSports" parent="." instance=ExtResource("12_sl5oy")]
+
+[node name="Suv" parent="." instance=ExtResource("13_20wl6")]
+
+[node name="SuvLuxury" parent="." instance=ExtResource("14_is65a")]
+
+[node name="Taxi" parent="." instance=ExtResource("15_jhpai")]
+
+[node name="Tractor" parent="." instance=ExtResource("16_leukm")]
+
+[node name="TractorPolice" parent="." instance=ExtResource("17_20erc")]
+
+[node name="TractorShovel" parent="." instance=ExtResource("18_ut0vl")]
+
+[node name="Truck" parent="." instance=ExtResource("19_ut1qt")]
+
+[node name="TruckFlat" parent="." instance=ExtResource("20_6lrcn")]
+
+[node name="Van" parent="." instance=ExtResource("21_ecjab")]

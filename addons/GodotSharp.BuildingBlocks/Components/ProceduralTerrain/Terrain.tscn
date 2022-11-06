@@ -1,0 +1,6 @@
+[gd_scene load_steps=16 format=3 uid="uid://3rbxmdwusg1y"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/ProceduralTerrain/Terrain.cs" id="1_fg1x2"]
+
+[node name="Terrain" type="Node"]
+script = ExtResource("1_fg1x2")

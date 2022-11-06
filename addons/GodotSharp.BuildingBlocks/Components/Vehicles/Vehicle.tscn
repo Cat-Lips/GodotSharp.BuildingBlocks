@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://d351m2wgc164q"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/Vehicles/Vehicle.cs" id="1_a1e10"]
+[ext_resource type="PackedScene" uid="uid://ugwkr866mxis" path="res://addons/GodotSharp.BuildingBlocks/Components/Vehicles/VehicleInput.tscn" id="2_xv7k5"]
+[ext_resource type="PackedScene" uid="uid://dcpiljaxytj7n" path="res://addons/GodotSharp.BuildingBlocks/Components/Network/Sync/PhysicsSync.tscn" id="3_wec0a"]
+
+[node name="Vehicle" type="VehicleBody3D"]
+script = ExtResource("1_a1e10")
+
+[node name="InputSync" parent="." instance=ExtResource("2_xv7k5")]
+unique_name_in_owner = true
+
+[node name="PhysicsSync" parent="." instance=ExtResource("3_wec0a")]
+unique_name_in_owner = true

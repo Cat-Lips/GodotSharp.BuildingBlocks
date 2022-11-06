@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcpiljaxytj7n"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/Network/Sync/PhysicsSync.cs" id="1_vl8sk"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_4i7y7"]
+properties/0/path = NodePath(".:Position")
+properties/0/spawn = true
+properties/0/sync = true
+properties/1/path = NodePath(".:Rotation")
+properties/1/spawn = true
+properties/1/sync = true
+properties/2/path = NodePath(".:LinearVelocity")
+properties/2/spawn = true
+properties/2/sync = true
+properties/3/path = NodePath(".:AngularVelocity")
+properties/3/spawn = true
+properties/3/sync = true
+
+[node name="PhysicsSync" type="MultiplayerSynchronizer"]
+root_path = NodePath(".")
+replication_config = SubResource("SceneReplicationConfig_4i7y7")
+script = ExtResource("1_vl8sk")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjx7e2ug354x8"]
+
+[ext_resource type="Script" path="res://Tests/NetworkTest/3D/Player.cs" id="1_dpkql"]
+[ext_resource type="PackedScene" uid="uid://b7jn2jfehd7a2" path="res://Tests/NetworkTest/Server/PlayerStatus.tscn" id="2_175tp"]
+[ext_resource type="PackedScene" uid="uid://dq2fmlulytmts" path="res://Tests/NetworkTest/Client/PlayerProfile.tscn" id="3_gxryu"]
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_dpkql")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+
+[node name="Status" parent="." instance=ExtResource("2_175tp")]
+unique_name_in_owner = true
+
+[node name="Profile" parent="." instance=ExtResource("3_gxryu")]
+unique_name_in_owner = true

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://diirptjau1mkv"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/Network/Network.cs" id="1_372n7"]
+
+[node name="Network" type="Node"]
+script = ExtResource("1_372n7")
+
+[node name="Spawn" type="MultiplayerSpawner" parent="."]
+spawn_path = NodePath("..")

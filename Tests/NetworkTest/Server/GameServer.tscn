@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpb7adpe87pge"]
+
+[ext_resource type="Script" path="res://Tests/NetworkTest/Server/GameServer.cs" id="1_j1sfk"]
+[ext_resource type="PackedScene" path="res://Tests/NetworkTest/Server/RpcGold.tscn" id="2_s5lue"]
+[ext_resource type="PackedScene" path="res://Tests/NetworkTest/Server/RpcVehicle.tscn" id="3_keocn"]
+
+[node name="GameServer" type="Node"]
+script = ExtResource("1_j1sfk")
+
+[node name="RpcGold" parent="." instance=ExtResource("2_s5lue")]
+unique_name_in_owner = true
+
+[node name="RpcVehicle" parent="." instance=ExtResource("3_keocn")]
+unique_name_in_owner = true

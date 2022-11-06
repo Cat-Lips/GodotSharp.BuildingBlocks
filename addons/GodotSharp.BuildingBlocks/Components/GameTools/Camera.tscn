@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://qnsoaxnixlfw"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/Camera.cs" id="1_0s7g3"]
+
+[node name="Camera" type="Camera3D"]
+script = ExtResource("1_0s7g3")

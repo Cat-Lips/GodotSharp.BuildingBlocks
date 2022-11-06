@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1bbb23jthqsr"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/UI/Controls/Accordion/AccordionToggle.cs" id="1_73ji7"]
+
+[node name="Toggle" type="Button"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+pivot_offset = Vector2(16, 16)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+toggle_mode = true
+button_pressed = true
+text = ">"
+script = ExtResource("1_73ji7")

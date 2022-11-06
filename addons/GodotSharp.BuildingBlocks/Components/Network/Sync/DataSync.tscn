@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqryla64gsbgv"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/Network/Sync/DataSync.cs" id="1_ymlpl"]
+
+[node name="DataSync" type="Node"]
+script = ExtResource("1_ymlpl")

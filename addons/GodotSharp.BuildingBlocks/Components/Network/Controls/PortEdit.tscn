@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/Network/Controls/PortEdit.cs" id="1_86ryn"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_kbxn1"]
+
+[node name="PortEdit" type="SpinBox"]
+theme_override_icons/updown = SubResource("ImageTexture_kbxn1")
+select_all_on_focus = true
+script = ExtResource("1_86ryn")

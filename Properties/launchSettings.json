@@ -1,0 +1,28 @@
+{
+  "profiles": {
+    "Run": {
+      "commandName": "Executable",
+      "executablePath": "../.godot/Godot_v4.0/Godot_v4.0.exe",
+      "commandLineArgs": "> godot.client.log 2>&1",
+      "workingDirectory": "."
+    },
+    "Run Client": {
+      "commandName": "Executable",
+      "executablePath": "../.godot/Godot_v4.0/Godot_v4.0.exe",
+      "commandLineArgs": "--client > godot.client.log 2>&1",
+      "workingDirectory": "."
+    },
+    "Run Server": {
+      "commandName": "Executable",
+      "executablePath": "../.godot/Godot_v4.0/Godot_v4.0.exe",
+      "commandLineArgs": "--server > godot.server.log 2>&1",
+      "workingDirectory": "."
+    },
+    "Run Headless": {
+      "commandName": "Executable",
+      "executablePath": "../.godot/Godot_v4.0/Godot_v4.0.exe",
+      "commandLineArgs": "--headless > godot.server.log 2>&1",
+      "workingDirectory": "."
+    }
+  }
+}

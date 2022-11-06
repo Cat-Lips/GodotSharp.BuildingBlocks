@@ -1,0 +1,67 @@
+Hello Playtesters!
+[center][b]Quick help to get things going[/b]
+[i](Press ESC to exit)[/i][/center]
+Synopsis:
+[ul]
+Basic capture the flag driving game
+[/ul]
+
+Gameplay:
+[ul]
+Press escape to toggle between menu mode and play mode
+-
+Menu Mode:  Use mouse to select a vehicle to drive (press ctrl to bounce if stuck)
+Menu Mode:  Press escape to return to free-look mode (hold shift to move faster)
+SinglePlayer:  Free range driving/vehicle editor (experimental)
+Multiplayer:  Capture the flag (main game)
+[/ul]
+
+CTF Scoring:
+[ul]
+1 point for first capture
+2 points for delivery
+(currently, no score limit, but try playing to 3 or 10)
+[/ul]
+
+Key Controls:
+[table=3]
+
+[cell][b]Action[/b][/cell]
+[cell][b]Key[/b][/cell]
+[cell][b]Description[/b][/cell]
+
+[cell]Forward[/cell]
+[cell]W[/cell]
+[cell]Driving/FreeLook[/cell]
+
+[cell]Back[/cell]
+[cell]S[/cell]
+[cell]Driving/FreeLook[/cell]
+
+[cell]Left[/cell]
+[cell]A[/cell]
+[cell]Driving only[/cell]
+
+[cell]Right[/cell]
+[cell]D[/cell]
+[cell]Driving only[/cell]
+
+[cell]Up[/cell]
+[cell]R[/cell]
+[cell]FreeLook only[/cell]
+
+[cell]Down[/cell]
+[cell]F[/cell]
+[cell]FreeLook only[/cell]
+
+[cell]Run[/cell]
+[cell]SHFT[/cell]
+[cell]Move faster in FreeLook[/cell]
+
+[cell]Jump[/cell]
+[cell]CTRL[/cell]
+[cell]Bounce the vehicle if stuck[/cell]
+
+[/table]
+
+[right][url=https://github.com/Cat-Lips/GodotSharp.SourceGenerators]github.com[/url] [url=https://github.com/Cat-Lips/GodotSharp.BuildingBlocks/releases]Download[/url][/right]

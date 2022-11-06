@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b8skdkkbe6ahj"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/ProceduralPlanets/PlanetNoise.cs" id="1_7kf5u"]
+
+[resource]
+script = ExtResource("1_7kf5u")

@@ -1,0 +1,52 @@
+[gd_scene load_steps=24 format=3 uid="uid://b4k0s53p2ubd5"]
+
+[ext_resource type="PackedScene" uid="uid://cowdptmfvm858" path="res://addons/GodotSharp.BuildingBlocks/Components/Game.tscn" id="1_10joh"]
+[ext_resource type="Script" path="res://Tests/NetworkTest/Main.cs" id="2_8r1tb"]
+[ext_resource type="PackedScene" uid="uid://5aqbpe4ravww" path="res://Tests/NetworkTest/2D/Menu.tscn" id="3_8uqrn"]
+[ext_resource type="PackedScene" uid="uid://de008c23mgs71" path="res://Tests/NetworkTest/2D/PlayerList.tscn" id="4_b8h1d"]
+[ext_resource type="PackedScene" uid="uid://diirptjau1mkv" path="res://addons/GodotSharp.BuildingBlocks/Components/Network/Network.tscn" id="4_nsn4a"]
+[ext_resource type="PackedScene" uid="uid://3rbxmdwusg1y" path="res://addons/GodotSharp.BuildingBlocks/Components/ProceduralTerrain/Terrain.tscn" id="5_h4gp5"]
+[ext_resource type="PackedScene" uid="uid://dt24hltqie7ij" path="res://Tests/NetworkTest/2D/QuickHelp.tscn" id="5_mg4fy"]
+[ext_resource type="PackedScene" uid="uid://bpb7adpe87pge" path="res://Tests/NetworkTest/Server/GameServer.tscn" id="11_nvn18"]
+[ext_resource type="PackedScene" uid="uid://cfayracqmsfan" path="res://Tests/NetworkTest/2D/VehicleEditor.tscn" id="11_rdr66"]
+
+[node name="World" instance=ExtResource("1_10joh")]
+script = ExtResource("2_8r1tb")
+
+[node name="Camera" parent="." index="1"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+
+[node name="Menu" parent="." index="3" instance=ExtResource("3_8uqrn")]
+unique_name_in_owner = true
+
+[node name="PlayerList" parent="." index="4" instance=ExtResource("4_b8h1d")]
+unique_name_in_owner = true
+visible = false
+
+[node name="QuickHelp" parent="." index="5" instance=ExtResource("5_mg4fy")]
+unique_name_in_owner = true
+visible = false
+
+[node name="VehicleEditor" parent="." index="6" instance=ExtResource("11_rdr66")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Terrain" parent="." index="7" node_paths=PackedStringArray("Actor") instance=ExtResource("5_h4gp5")]
+unique_name_in_owner = true
+Actor = NodePath("../Camera")
+
+[node name="Network" parent="." index="8" instance=ExtResource("4_nsn4a")]
+unique_name_in_owner = true
+
+[node name="Vehicles" parent="." index="9" instance_placeholder="res://Tests/NetworkTest/3D/Vehicles.tscn"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+
+[node name="GoldBar" parent="Vehicles" index="20" instance_placeholder="res://Tests/NetworkTest/3D/GoldBar.tscn"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="FinishLine" parent="Vehicles" index="21" instance_placeholder="res://Tests/NetworkTest/3D/FinishLine.tscn"]
+
+[node name="GameServer" parent="." index="10" instance=ExtResource("11_nvn18")]
+unique_name_in_owner = true

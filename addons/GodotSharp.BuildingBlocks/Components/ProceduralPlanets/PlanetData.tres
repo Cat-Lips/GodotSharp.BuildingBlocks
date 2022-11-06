@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bvo7g58yi5efn"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/ProceduralPlanets/PlanetData.cs" id="3_llm11"]
+
+[resource]
+script = ExtResource("3_llm11")

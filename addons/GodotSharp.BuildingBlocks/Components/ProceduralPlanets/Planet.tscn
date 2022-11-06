@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bq1884t2glvm5"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/ProceduralPlanets/Planet.cs" id="1_pmc0p"]
+[ext_resource type="Shader" path="res://addons/GodotSharp.BuildingBlocks/Components/ProceduralPlanets/PlanetFace.gdshader" id="2_bthu3"]
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/ProceduralPlanets/PlanetFace.cs" id="2_ljm3u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_afgi1"]
+shader = ExtResource("2_bthu3")
+
+[node name="Planet" type="Node3D"]
+script = ExtResource("1_pmc0p")
+
+[node name="Up" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_afgi1")
+script = ExtResource("2_ljm3u")
+Normal = Vector3(0, 1, 0)
+
+[node name="Down" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_afgi1")
+script = ExtResource("2_ljm3u")
+Normal = Vector3(0, -1, 0)
+
+[node name="Left" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_afgi1")
+script = ExtResource("2_ljm3u")
+Normal = Vector3(-1, 0, 0)
+
+[node name="Right" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_afgi1")
+script = ExtResource("2_ljm3u")
+Normal = Vector3(1, 0, 0)
+
+[node name="Front" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_afgi1")
+script = ExtResource("2_ljm3u")
+Normal = Vector3(0, 0, -1)
+
+[node name="Back" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_afgi1")
+script = ExtResource("2_ljm3u")
+Normal = Vector3(0, 0, 1)

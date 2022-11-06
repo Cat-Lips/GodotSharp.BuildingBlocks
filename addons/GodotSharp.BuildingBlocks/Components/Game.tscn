@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://cowdptmfvm858"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/Game.cs" id="1_yk855"]
+[ext_resource type="PackedScene" uid="uid://bpe37y468675m" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/Environment.tscn" id="2_fweeb"]
+[ext_resource type="PackedScene" uid="uid://qnsoaxnixlfw" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/Camera.tscn" id="3_onp0y"]
+[ext_resource type="PackedScene" uid="uid://cpnbdcfwynwxo" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/MyInput.tscn" id="4_051f2"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_yk855")
+
+[node name="Environment" parent="." instance=ExtResource("2_fweeb")]
+
+[node name="Camera" parent="." instance=ExtResource("3_onp0y")]
+
+[node name="Input" parent="." instance=ExtResource("4_051f2")]

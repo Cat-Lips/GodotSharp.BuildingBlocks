@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwuxkjrw4s8l5"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/UI/Controls/ResourceEditor.cs" id="1_cer7i"]
+[ext_resource type="PackedScene" uid="uid://bgyjj2hjlbo5n" path="res://addons/GodotSharp.BuildingBlocks/Components/UI/Controls/Accordion/Accordion.tscn" id="3_g0om2"]
+
+[node name="ResourceEditor" instance=ExtResource("3_g0om2")]
+script = ExtResource("1_cer7i")
+SavePath = ""
+Resource = null

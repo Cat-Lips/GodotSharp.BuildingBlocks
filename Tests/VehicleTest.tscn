@@ -1,0 +1,131 @@
+[gd_scene load_steps=34 format=3]
+
+[ext_resource type="PackedScene" uid="uid://bpe37y468675m" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/Environment.tscn" id="1_uxp4h"]
+[ext_resource type="PackedScene" uid="uid://qnsoaxnixlfw" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/Camera.tscn" id="2_g2xpr"]
+[ext_resource type="Script" path="res://Tests/VehicleTest.cs" id="2_pctxg"]
+[ext_resource type="PackedScene" uid="uid://cpnbdcfwynwxo" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/MyInput.tscn" id="3_hc358"]
+[ext_resource type="PackedScene" path="res://addons/GodotSharp.BuildingBlocks/Components/SimpleTerrain/FlatTerrain.tscn" id="3_n4ng6"]
+[ext_resource type="PackedScene" uid="uid://ba2mnjwt85nh4" path="res://Assets/Models/Vehicles/kenney_carkit/glb/ambulance.glb" id="4_udlg0"]
+[ext_resource type="PackedScene" uid="uid://dtynpy2k264jf" path="res://Assets/Models/Vehicles/kenney_carkit/glb/delivery.glb" id="5_cuwul"]
+[ext_resource type="PackedScene" uid="uid://cqjnelu6ivxus" path="res://Assets/Models/Vehicles/kenney_carkit/glb/deliveryFlat.glb" id="6_536vi"]
+[ext_resource type="PackedScene" uid="uid://i1305210j8yc" path="res://Assets/Models/Vehicles/kenney_carkit/glb/firetruck.glb" id="7_o4j0h"]
+[ext_resource type="PackedScene" uid="uid://beqpxlh4wvp0r" path="res://Assets/Models/Vehicles/kenney_carkit/glb/garbageTruck.glb" id="8_vxhda"]
+[ext_resource type="PackedScene" uid="uid://bnxbxmn38nqgo" path="res://Assets/Models/Vehicles/kenney_carkit/glb/hatchbackSports.glb" id="9_7oipe"]
+[ext_resource type="PackedScene" uid="uid://dpw64xpt3orx3" path="res://Assets/Models/Vehicles/kenney_carkit/glb/police.glb" id="10_31oxd"]
+[ext_resource type="PackedScene" uid="uid://mxkleynhdpr4" path="res://Assets/Models/Vehicles/kenney_carkit/glb/race.glb" id="11_eia0h"]
+[ext_resource type="PackedScene" uid="uid://h22gvoo7b20d" path="res://Assets/Models/Vehicles/kenney_carkit/glb/raceFuture.glb" id="12_q8x0o"]
+[ext_resource type="PackedScene" uid="uid://b4hq8wc5onoac" path="res://Assets/Models/Vehicles/kenney_carkit/glb/sedan.glb" id="13_a853l"]
+[ext_resource type="PackedScene" uid="uid://bqfvtjxgy70w4" path="res://Assets/Models/Vehicles/kenney_carkit/glb/sedanSports.glb" id="14_3fcet"]
+[ext_resource type="PackedScene" uid="uid://be35ymp4eqdo" path="res://Assets/Models/Vehicles/kenney_carkit/glb/suv.glb" id="15_irc05"]
+[ext_resource type="PackedScene" uid="uid://bqw7qcecfie8l" path="res://Assets/Models/Vehicles/kenney_carkit/glb/suvLuxury.glb" id="16_y0oso"]
+[ext_resource type="PackedScene" uid="uid://b48f14k1dmxvh" path="res://Assets/Models/Vehicles/kenney_carkit/glb/taxi.glb" id="17_gd1ki"]
+[ext_resource type="PackedScene" uid="uid://bak2m5cw4fyor" path="res://Assets/Models/Vehicles/kenney_carkit/glb/tractor.glb" id="18_dejox"]
+[ext_resource type="PackedScene" uid="uid://bst0orrf4ji3p" path="res://Assets/Models/Vehicles/kenney_carkit/glb/tractorPolice.glb" id="19_u2omh"]
+[ext_resource type="PackedScene" uid="uid://cpwi8kly7payx" path="res://Assets/Models/Vehicles/kenney_carkit/glb/tractorShovel.glb" id="20_uwwm2"]
+[ext_resource type="PackedScene" uid="uid://mg0tybqsuw5n" path="res://Assets/Models/Vehicles/kenney_carkit/glb/truck.glb" id="21_ltie8"]
+[ext_resource type="PackedScene" uid="uid://cuv07jgfjqf7h" path="res://Assets/Models/Vehicles/kenney_carkit/glb/truckFlat.glb" id="22_pd7ko"]
+[ext_resource type="PackedScene" uid="uid://7cdfjhed1xs3" path="res://Assets/Models/Vehicles/kenney_carkit/glb/van.glb" id="23_tf44r"]
+[ext_resource type="PackedScene" uid="uid://coqithw030kxq" path="res://Assets/Models/Vehicles/kenney_carkit/glb/wheelDark.glb" id="24_2s63x"]
+[ext_resource type="PackedScene" uid="uid://k7f2ga1wus1r" path="res://Assets/Models/Vehicles/kenney_carkit/glb/wheelDefault.glb" id="25_j18w1"]
+[ext_resource type="PackedScene" uid="uid://bqk4y1orx4f3u" path="res://Assets/Models/Vehicles/kenney_carkit/glb/wheelRacing.glb" id="26_btyh5"]
+[ext_resource type="PackedScene" uid="uid://c3r8a81q4jdb1" path="res://Assets/Models/Vehicles/kenney_carkit/glb/wheelTractorBack.glb" id="27_ldoue"]
+[ext_resource type="PackedScene" uid="uid://cgxy5ikej8bl0" path="res://Assets/Models/Vehicles/kenney_carkit/glb/wheelTractorDarkBack.glb" id="28_r251p"]
+[ext_resource type="PackedScene" uid="uid://dr4m4amnu1j5o" path="res://Assets/Models/Vehicles/kenney_carkit/glb/wheelTractorDarkFront.glb" id="29_wpn17"]
+[ext_resource type="PackedScene" uid="uid://5eq100asl7qo" path="res://Assets/Models/Vehicles/kenney_carkit/glb/wheelTractorFront.glb" id="30_515d1"]
+[ext_resource type="PackedScene" uid="uid://dvxu8u4nbr1t5" path="res://Assets/Models/Vehicles/kenney_carkit/glb/wheelTruck.glb" id="31_o7jd2"]
+
+[node name="VehicleTest" type="Node"]
+script = ExtResource("2_pctxg")
+
+[node name="Environment" parent="." instance=ExtResource("1_uxp4h")]
+
+[node name="Camera" parent="." instance=ExtResource("2_g2xpr")]
+CameraType = 1
+
+[node name="Input" parent="." instance=ExtResource("3_hc358")]
+
+[node name="Terrain" parent="." instance=ExtResource("3_n4ng6")]
+
+[node name="Ambulance" parent="." instance=ExtResource("4_udlg0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Delivery" parent="." instance=ExtResource("5_cuwul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Delivery Flat" parent="." instance=ExtResource("6_536vi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Firetruck" parent="." instance=ExtResource("7_o4j0h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Garbage Truck" parent="." instance=ExtResource("8_vxhda")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Hatchback Sports" parent="." instance=ExtResource("9_7oipe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Police" parent="." instance=ExtResource("10_31oxd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Race" parent="." instance=ExtResource("11_eia0h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Race Future" parent="." instance=ExtResource("12_q8x0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Sedan" parent="." instance=ExtResource("13_a853l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Sedan Sports" parent="." instance=ExtResource("14_3fcet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Suv" parent="." instance=ExtResource("15_irc05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Suv Luxury" parent="." instance=ExtResource("16_y0oso")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Taxi" parent="." instance=ExtResource("17_gd1ki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Tractor" parent="." instance=ExtResource("18_dejox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Tractor Police" parent="." instance=ExtResource("19_u2omh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Tractor Shovel" parent="." instance=ExtResource("20_uwwm2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Truck" parent="." instance=ExtResource("21_ltie8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Truck Flat" parent="." instance=ExtResource("22_pd7ko")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Van" parent="." instance=ExtResource("23_tf44r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Wheel Dark" parent="." instance=ExtResource("24_2s63x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Wheel Default" parent="." instance=ExtResource("25_j18w1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Wheel Racing" parent="." instance=ExtResource("26_btyh5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Wheel Tractor Back" parent="." instance=ExtResource("27_ldoue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Wheel Tractor Dark Back" parent="." instance=ExtResource("28_r251p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Wheel Tractor Dark Front" parent="." instance=ExtResource("29_wpn17")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Wheel Tractor Front" parent="." instance=ExtResource("30_515d1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Wheel Truck" parent="." instance=ExtResource("31_o7jd2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)

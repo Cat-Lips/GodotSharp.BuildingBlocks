@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://chfsfoj03swj4"]
+
+[ext_resource type="Script" path="res://Tests/NetworkTest/3D/GoldBar.cs" id="1_86066"]
+[ext_resource type="ArrayMesh" uid="uid://b8elm02ibnkw1" path="res://Assets/Models/Items/GoldBar/Obj/Ingot.obj" id="2_2th4j"]
+[ext_resource type="Texture2D" uid="uid://xnb6hswpqxmw" path="res://Assets/Models/Items/GoldBar/Textures/GoldIngot.png" id="3_58vld"]
+[ext_resource type="PackedScene" uid="uid://cqryla64gsbgv" path="res://addons/GodotSharp.BuildingBlocks/Components/Network/Sync/DataSync.tscn" id="4_1ssaf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s02ok"]
+albedo_texture = ExtResource("3_58vld")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_50oy0"]
+points = PackedVector3Array(0.202421, 2e-06, 0.407621, -0.202422, 2e-06, 0.407621, 0.202421, 2e-06, -0.406914, 0.134498, 0.181045, 0.338095, -0.134539, 0.181045, 0.338095, -0.202422, 2e-06, -0.406914, 0.134498, 0.181045, -0.337468, -0.134539, 0.181045, -0.337468)
+
+[node name="GoldBar" type="Area3D"]
+transform = Transform3D(-0.247388, 0, 0.968918, 0, 1, 0, -0.968918, 0, -0.247388, 0, 0, 0)
+script = ExtResource("1_86066")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_2th4j")
+surface_material_override/0 = SubResource("StandardMaterial3D_s02ok")
+
+[node name="Shape" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_50oy0")
+
+[node name="DataSync" parent="." instance=ExtResource("4_1ssaf")]

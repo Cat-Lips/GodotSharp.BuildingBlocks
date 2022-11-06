@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://e65ipqntfc3k"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/UI/Controls/Accordion/AccordionTitle.cs" id="1_8oc5w"]
+[ext_resource type="PackedScene" uid="uid://b1bbb23jthqsr" path="res://addons/GodotSharp.BuildingBlocks/Components/UI/Controls/Accordion/AccordionToggle.tscn" id="1_8uyek"]
+
+[node name="Title" type="HBoxContainer"]
+script = ExtResource("1_8oc5w")
+
+[node name="RequiredForRotation" type="Control" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+
+[node name="Toggle" parent="RequiredForRotation" instance=ExtResource("1_8uyek")]
+unique_name_in_owner = true
+layout_mode = 1
+rotation = 0.0
+
+[node name="Title" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+text = ">>> Title"
+vertical_alignment = 1

@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/Vehicles/Config/VehicleConfig.cs" id="3_wjrrc"]
+
+[resource]
+script = ExtResource("3_wjrrc")

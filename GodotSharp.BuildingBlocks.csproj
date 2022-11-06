@@ -1,0 +1,20 @@
+﻿<Project Sdk="Godot.NET.Sdk/4.0.2">
+  <PropertyGroup>
+    <LangVersion>preview</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFramework>net7.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="**/*.tscn" />
+    <Content Include="**/*.tres" />
+    <Content Include="**/*.material" />
+    <Content Include="**/*.gdshader" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AsyncAwaitBestPractices" Version="6.0.6" />
+    <PackageReference Include="FastEnum" Version="1.8.0" />
+    <PackageReference Include="GodotSharp.SourceGenerators" Version="2.1.0-230411-1908.Release" />
+    <PackageReference Include="Humanizer" Version="2.14.1" />
+  </ItemGroup>
+</Project>
